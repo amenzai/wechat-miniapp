@@ -1,54 +1,64 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+import {
+  login
+} from '../../api/api.js'
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    isAuth: false,
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
+  getUserInfo(res) {
+    const userInfo = res.detail.userInfo
+    if (userInfo) {
       this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        isAuth: true
       })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
+      this._login(res.detail)
     }
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  onLoad() {
+    const userInfoObj = app.globalData.userInfoObj
+    if (userInfoObj) {
+      this.setData({
+        isAuth: true
+      })
+      this._checkKey(userInfoObj)
+    } else {
+      app.getUserInfoCallBack = (res) => {
+        this.setData({
+          isAuth: true
+        })
+        this._checkKey(res)
+      }
+    }
+  },
+  onShow() {
+
+  },
+  onReady() {},
+  _checkKey(params) {
+    const miniappKey = wx.getStorageSync('miniappKey')
+    if (!miniappKey) {
+      this._login(params)
+    }
+  },
+  _login(params) {
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        const send = {
+          code: res.code,
+          signature: params.signature,
+          rawData: params.rawData,
+          encryptedData: params.encryptedData,
+          iv: params.iv
+        }
+        login(send).then(res => {
+          wx.setStorageSync('miniappKey', res.data)
+        })
+      }
     })
   }
 })

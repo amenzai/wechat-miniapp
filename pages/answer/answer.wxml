@@ -1,0 +1,33 @@
+<!--pages/answer/answer.wxml-->
+<view class="container">
+  <view class="qs-container">
+    <view class="num-sort">11/30</view>
+    <view class="qs">
+      <view class="tag">单选</view>
+      <view class="title">胜多负少的三大范式是大神的方式发生是大神的方式发生是大神的方式发生是大神的方式发生</view>
+    </view>
+    <view class="select-item">A. 是大神的方式发生</view>
+    <view class="select-item">A. 是大神的方式发生</view>
+    <view class="select-item">A. 是大神的方式发生</view>
+    <view class="select-item">A. 是大神的方式发生</view>
+  </view>
+  <!-- <view class="parsing">
+    <view class="header van-hairline--bottom">
+      <van-icon name="close" size="12px" color="#f44"/>
+      <text class="red-text">错误</text>
+      <view class="strong">正确答案：<text class="green-text">D</text></view>
+    </view>
+    <view class="body">
+      <view class="sub-title">解析</view>
+      <view class="sub-dsc">
+        sdfs三大范式三大范式三大范式三大范式三大范式三大范式
+        三大范式三大范式三大范式三大范式三大范式三大范式三大范式三大范式
+        三大范式三大范式三大范式三大范式三大范式三大范式三大范式三大范式
+        三大范式三大范式三大范式三大范式三大范式三大范式三大范式三大范式
+      </view>
+    </view>
+  </view> -->
+  <view class="submit-btn-wrap">
+    <button class="common-btn submit-btn" disabled="{{true}}">提交题目</button>
+  </view>
+</view>

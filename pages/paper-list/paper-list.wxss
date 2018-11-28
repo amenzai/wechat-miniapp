@@ -1,0 +1,17 @@
+/* pages/paper-list/paper-list.wxss */
+
+.list-item {
+  font-size: 17px;
+  padding: 28px 20px;
+}
+.flex-item {
+  padding-right: 5px;
+}
+.cell-text {
+  color: #f44;
+  font-size: 12px;
+  padding-right: 4px;
+}
+.view-hover {
+  background-color: #ECECEC;
+}

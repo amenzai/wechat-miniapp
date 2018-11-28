@@ -1,14 +1,16 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-  <van-button type="primary">按钮</van-button>
+  <view class="page-title">考研政治模拟试卷</view>
+  <navigator hover-class="navigator-hover" url="/pages/paper-list/paper-list" class="choose-item flex">
+    <van-icon name="pending-orders" size="20px" color="#6441A5"/>
+    <view class="flex-item van-ellipsis">挑选试卷</view>
+    <van-icon name="arrow" size="16px" color="#000" />
+  </navigator>
+  <navigator class="choose-item flex" hover-class="navigator-hover" url="/pages/paper-list/paper-list">
+    <van-icon name="pending-orders" size="20px" color="#6441A5"/>
+    <view class="flex-item van-ellipsis">复习错题</view>
+    <van-icon name="arrow" size="16px" color="#000" />
+  </navigator>
 </view>
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="full-mask text-btn" wx:if="{{!isAuth}}"></button>
+<wux-button block type="dark">123</wux-button>

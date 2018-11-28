@@ -27,10 +27,10 @@ const request = function (method, url, data = {}, type = false) {
         ...data
       },
       header,
-      success: ({
-        data
-      }) => {
-        if (data.code === 200) {
+      success: (res) => {
+        console.log(res); // res.statusCode === 404 or 502 success {errMsg header statusCode data}
+        const data = res.data
+        if ( data.code === 200) {
           resolve(data)
         } else {
           wx.showToast({
@@ -44,10 +44,9 @@ const request = function (method, url, data = {}, type = false) {
         console.log('request success----', data)
       },
 
-      fail: ({
-        errMsg
-      }) => {
-        console.log('request fail----', errMsg)
+      fail: (res) => {
+        console.log('request fail----', res) // {errMsg}
+        const errMsg = res.errMsg
         wx.showToast({
           title: errMsg || '接口异常',
           icon: 'none',
