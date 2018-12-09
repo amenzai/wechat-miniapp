@@ -2,6 +2,9 @@
 /* main-color #6441A5 
 bdc: #DCDFE6
 color:  #303133  #606266 #909399 #C0C4CC;
+
+@bgc: #f5f6f7;
+@search-input-bg: rgb(245, 245, 245);
 */
 /* export var RED = '#f44';
 export var BLUE = '#1989fa';
