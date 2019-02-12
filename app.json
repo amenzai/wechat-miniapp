@@ -6,10 +6,10 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fafafa",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "gjcdemo",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#fafafa"
+    "backgroundColor": "#fff"
   },
   "networkTimeout": {
     "request": 10000,

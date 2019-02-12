@@ -9,8 +9,9 @@ color:  #303133  #606266 #909399 #C0C4CC;
 /* export var RED = '#f44';
 export var BLUE = '#1989fa';
 export var GREEN = '#4b0'; */
-@import "style/vantbase.wxss";
-@import "style/weuibase.wxss";
+@import 'style/vantbase.wxss';
+@import 'style/weuibase.wxss';
+
 /* // color
 @weuiColorPrimary: #09bb07;
 @weuiColorWarn: #E64340;
@@ -32,72 +33,72 @@ export var GREEN = '#4b0'; */
 @weuiTextColorWarn: @weuiColorWarn;
 @weuiTextColorGray: #888888; */
 page {
-  background-color: #fafafa;
-  font-size: 16px;
-  color: #353535;
+  background-color: #fff;
+  font-size: 32rpx;
+  color: #303133;
   line-height: 1;
-  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
 }
 
 /* lib */
 
-.strong{
+.strong {
   font-weight: bold;
 }
-.tc{
+
+.tc {
   text-align: center;
 }
+
 .red-text {
   color: #f44;
 }
+
 .green-text {
   color: #4b0;
 }
-.flex {
-  display: flex;
-  align-items: center;
-}
-.flex-item {
-  flex: 1;
-}
+
 .section-title {
-  padding: 10px 15px;
+  padding: 20rpx 30rpx;
   line-height: 24px;
-  font-size: 14px;
+  font-size: 28rpx;
   color: #606266;
 }
+
 .common-btn {
-  font-size: 16px;
-  line-height: 44px;
-  height: 44px;
-  border-radius: 22px;
-  background-color: #6441A5;
+  font-size: rpx;
+  line-height: 88rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  background-color: #6441a5;
   box-sizing: border-box;
   color: #fff;
 }
+
 .common-btn-line {
-  line-height: 44px;
-  height: 44px;
+  line-height: 88rpx;
+  height: 88rpx;
   border-radius: 50%;
-  border: 2px solid #6441A5;
+  border: 4rpx solid #6441a5;
   box-sizing: border-box;
-  color: #6441A5;
+  color: #6441a5;
 }
 
 .common-btn[disabled] {
-  color: #909399 ! important;
-  background: #eee ! important;
-  border-color: #DCDFE6 ! important;
-  pointer-events:none;
-  cursor: not-allowed ! important;
-  opacity: 1 ! important;
+  color: #909399 !important;
+  background: #eee !important;
+  border-color: #dcdfe6 !important;
+  pointer-events: none;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
 }
+
 .common-btn[disabled]::after {
-  border-color: #DCDFE6 ! important;
+  border-color: #dcdfe6 !important;
 }
 
 .common-btn:after {
-  border: none; 
+  border: none;
 }
 
 /* .gjc-modal {
@@ -116,4 +117,3 @@ page {
   flex-direction: column;
   align-content: center;
 } */
-

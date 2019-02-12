@@ -1,87 +1,100 @@
 /* pages/answer/answer.wxss */
-page {
-  /* background-color: #fff; */
-}
+
 .container {
-  /* padding-top: 10px; */
+  background-color: #f5f6f7;
 }
+
 .qs-container {
-  padding: 48px 15px 15px;
+  padding: 96rpx 30rpx 30rpx;
   position: relative;
   /* font-size: 14px; */
-  line-height: 24px;
+  line-height: 48rpx;
   background-color: #fff;
   overflow: hidden;
 }
+
 .qs-container .num-sort {
-  font-size: 12px;
-  padding-top: 24px;
+  font-size: 24rpx;
+  padding-top: 52rpx;
   position: absolute;
-  top: -25px;
+  top: -50rpx;
   left: 50%;
-  margin-left: -25px;
-  width: 50px;
-  height: 50px;
+  margin-left: -50rpx;
+  width: 100rpx;
+  height: 100rpx;
   border-radius: 50%;
   background-color: #fafafa;
+  /* color: #fff; */
   text-align: center;
   box-sizing: border-box;
 }
+
 .qs-container .qs {
-  margin-bottom: 20px;
+  margin-bottom: 40rpx;
 }
+
 .qs-container .tag {
   box-sizing: border-box;
   float: left;
-  font-size: 12px;
-  margin-right: 4px;
-  padding: 0 4px;
-  line-height: 20px;
-  border-radius: 12px 12px 0 12px;
+  font-size: 24rpx;
+  margin-right: 8rpx;
+  padding: 0 8rpx;
+  line-height: 40rpx;
+  border-radius: 24rpx 24rpx 0 24rpx;
   background-color: #6441A5;
   color: #fff;
 }
 
 .select-item {
-  line-height: 24px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  border-radius: 4px;
+  line-height: 48rpx;
+  padding: 20rpx 30rpx;
+  border-radius: 12rpx;
   position: relative;
-  background-color: #fafafa;
+  background-color: #f5f6f7;
 }
-.select-item + .select-item {
-  margin-top: 15px;
+
+.select-item.selected {
+  background-color: #6441A5;
+  color: #fff;
+}
+
+.select-item+.select-item {
+  margin-top: 30rpx;
 }
 
 .parsing {
-  margin-top: 10px;
+  margin-top: 20rpx;
   background-color: #fff;
-  padding: 0px 15px 64px;
+  padding: 0px 30rpx 128rpx;
 }
+
 .parsing .header {
   display: flex;
-  padding: 20px 0;
+  align-items: center;
+  padding: 40rpx 0;
 }
+
 .parsing .red-text {
-  margin-left: 4px;
+  margin-left: 8rpx;
   flex: 1;
 }
+
 .parsing .body {
-  margin-top: 20px;
-  font-size: 14px;
+  margin-top: 40rpx;
+  font-size: 28rpx;
 }
-.parsing  .sub-title{
+
+.parsing .sub-title {
   color: #909399;
-  margin-bottom: 6px;
+  margin-bottom: 12rpx;
 }
+
 .parsing .sub-dsc {
-  line-height: 24px;
+  line-height: 48rpx;
 }
 
 .submit-btn-wrap {
-  padding: 10px 0;
+  padding: 20rpx 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,6 +103,7 @@ page {
   left: 0;
   right: 0;
 }
+
 .submit-btn {
   width: 80%;
 }

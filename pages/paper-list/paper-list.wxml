@@ -1,12 +1,12 @@
-<!--pages/paper-list/paper-list.wxml-->
+<!-- pages/paper-list/paper-list.wxml -->
 <view class="container paper-list">
-  <view class="list-item flex van-hairline--bottom" hover-class="view-hover" bind:tap="goAnswer">
-    <view class="flex-item van-ellipsis">是愿意</view>
+  <view class="list-item van-hairline--bottom" hover-class="view-hover" bind:tap="goAnswer">
+    <view class="list-item-text van-ellipsis">是愿意</view>
     <view class="cell-text">12道题</view>
-    <van-icon name="arrow" size="12px"/>
+    <van-icon name="arrow" size="12px" />
   </view>
-  <view class="list-item flex van-hairline--bottom" hover-class="view-hover" bind:tap="goAnswer">
-    <view class="flex-item van-ellipsis">试卷二</view>
-    <van-icon name="arrow" size="12px"/>
+  <view class="list-item van-hairline--bottom" hover-class="view-hover" bind:tap="goAnswer">
+    <view class="list-item-text van-ellipsis">试卷二</view>
+    <van-icon name="arrow" size="12px" />
   </view>
 </view>

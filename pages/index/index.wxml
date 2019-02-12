@@ -1,14 +1,17 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-  <view class="page-title">考研政治模拟试卷</view>
+  <view class="page-header">
+    <text class="title">考研政治模拟试卷</text>
+    <text class="line"></text>
+  </view>
   <navigator hover-class="navigator-hover" url="/pages/paper-list/paper-list" class="choose-item flex">
-    <van-icon name="pending-orders" size="20px" color="#6441A5"/>
-    <view class="flex-item van-ellipsis">挑选试卷</view>
+    <van-icon name="pending-orders" size="20px" color="#6441A5" />
+    <view class="choose-item-text van-ellipsis">挑选试卷</view>
     <van-icon name="arrow" size="16px" color="#000" />
   </navigator>
   <navigator class="choose-item flex" hover-class="navigator-hover" url="/pages/paper-list/paper-list">
-    <van-icon name="pending-orders" size="20px" color="#6441A5"/>
-    <view class="flex-item van-ellipsis">复习错题</view>
+    <van-icon name="pending-orders" size="20px" color="#6441A5" />
+    <view class="choose-item-text van-ellipsis">复习错题</view>
     <van-icon name="arrow" size="16px" color="#000" />
   </navigator>
 </view>

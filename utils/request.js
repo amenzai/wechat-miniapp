@@ -15,7 +15,7 @@ const request = function (method, url, data = {}, type = false) {
   return new Promise((resolve, reject) => {
     const token = wx.getStorageSync('token') || ''
     if (!type) {
-      data = removeEmptyProp(data, type)
+      data = removeEmptyProp(data)
     }
     console.log('send data----', url, data)
     wx.showNavigationBarLoading()
@@ -30,7 +30,7 @@ const request = function (method, url, data = {}, type = false) {
       success: (res) => {
         console.log(res); // res.statusCode === 404 or 502 success {errMsg header statusCode data}
         const data = res.data
-        if ( data.code === 200) {
+        if (data.code === 200) {
           resolve(data)
         } else {
           wx.showToast({
