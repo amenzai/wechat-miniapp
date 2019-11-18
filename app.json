@@ -20,5 +20,6 @@
   "debug": false,
   "usingComponents": {
     "van-icon": "/components/vant/icon/index"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

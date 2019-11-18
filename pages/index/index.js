@@ -9,6 +9,7 @@ Page({
     isAuth: false,
   },
   onLoad() {
+    console.log('omload');
     const userInfoObj = app.globalData.userInfoObj
     if (userInfoObj) {
       this.setData({
@@ -25,9 +26,17 @@ Page({
     }
   },
   onShow() {
-
+    console.log('on show')
   },
-  onReady() {},
+  onReady() {
+    console.log('on ready')
+  },
+  onHide() {
+    console.log('on hide')
+  },
+  onUnload() {
+    console.log('on unload');
+  },
   //事件处理函数
   getUserInfo(res) {
     const userInfo = res.detail.userInfo

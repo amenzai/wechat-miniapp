@@ -4,8 +4,13 @@
   background-color: transparent;
 }
 
+page {
+  background-color: #eee;
+}
+
 .container {
   padding: 40rpx;
+  background-color: #fff;
 }
 
 .page-header {

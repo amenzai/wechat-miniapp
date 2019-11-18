@@ -11,6 +11,7 @@ export var BLUE = '#1989fa';
 export var GREEN = '#4b0'; */
 @import 'style/vantbase.wxss';
 @import 'style/weuibase.wxss';
+@import 'style/icon.wxss';
 
 /* // color
 @weuiColorPrimary: #09bb07;

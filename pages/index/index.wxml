@@ -9,11 +9,12 @@
     <view class="choose-item-text van-ellipsis">挑选试卷</view>
     <van-icon name="arrow" size="16px" color="#000" />
   </navigator>
-  <navigator class="choose-item flex" hover-class="navigator-hover" url="/pages/paper-list/paper-list">
+  <navigator class="choose-item" hover-class="navigator-hover" url="/pages/paper-list/paper-list">
     <van-icon name="pending-orders" size="20px" color="#6441A5" />
     <view class="choose-item-text van-ellipsis">复习错题</view>
     <van-icon name="arrow" size="16px" color="#000" />
   </navigator>
+  <text class="iconfont icon-search"></text>
 </view>
 <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="full-mask text-btn" wx:if="{{!isAuth}}"></button>
 <wux-button block type="dark">123</wux-button>

@@ -1,6 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
+    console.log('onlaunch')
     
     // 判断是否授权
     wx.getSetting({
@@ -11,6 +12,12 @@ App({
         }
       }
     })
+  },
+  onShow() {
+    console.log('app show')
+  },
+  onHide() {
+    console.log('app hideS')
   },
   getUserInfo() {
     wx.getUserInfo({
